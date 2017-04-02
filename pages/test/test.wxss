@@ -1,0 +1,9 @@
+.test-style{
+  justify-content:space-between;  
+  flex:1;
+  flex-direction:column;
+  display:flex;
+  align-items:'center';
+  width: auto;
+  height: 200rpx
+}

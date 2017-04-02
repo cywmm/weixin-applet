@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/test/test"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#2ECCFA",
     "navigationBarTitleText": "可乐天气",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   }
 }

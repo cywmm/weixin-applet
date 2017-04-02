@@ -1,0 +1,5 @@
+<view class="test-style" style="flex-direction:column">
+ <text>s1111</text>
+ <text>s2222</text>
+ <text>s3333</text>
+</view>

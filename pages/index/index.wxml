@@ -1,12 +1,20 @@
-<!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
 
-<view class="userinfo">
-<text >{{userInfo.nickName}}</text> 
+<!--<view class="index-bd">
+<image class="index-logo" src="../../image/sunny_day.png"></image>
+ <text class="index-desc">{{location.name}}</text>
+</view>-->
+<view class="index-bd">
+<view >
+      <block wx:for="{{daily}}" wx:key="{{item}}">
+          <view id="{{item}}" class="kind-list-item" bindtap="clickBtn">
+                <view class="kind-list-text" >
+                  <image class="kind-list-img" wx:if="{{item.text_day=='晴'}}" src="../../image/sunny_day.png"></image>
+                  <image class="kind-list-img" wx:if="{{item.text_day=='阴'}}" src="../../image/cloudy_day.png"></image>  
+                </view>
+                <view class="index-desc">{{item.text_day}}</view>
+                <view class="index-desc">{{item.wind_direction}}</view>
+                <view class="index-desc">{{item.wind_speed}}</view>
+           </view>
+      </block>
 </view>
-  
 </view>
