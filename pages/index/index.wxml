@@ -10,16 +10,24 @@
                   <image class="kind-list-img-header" wx:if="{{daily[0].text_day=='中雨'}}" src="../../image/rain.png"></image>  
                   <image class="kind-list-img-header" wx:if="{{daily[0].text_day=='阵雨'}}" src="../../image/shower.png"></image>
 
-                  <text>上海</text>
+                  <view class="kind-list-text">
+                  <text class="kind-list-text-one">{{location.name}}</text>
+                  <text class="kind-list-text-two">{{daily[0].text_day}}</text>
+                  </view>
 
-                  <text>15</text>
+                   <view class="kind-list-temperature">
+                  <text class="kind-list-temperature-text">{{daily[0].high}}/{{daily[0].low}}</text>
+                  </view>
+                  
             
 </view>
 
+<text class="kind-list-line"></text>
+
 <view class="kind-list-item">
       <block wx:for="{{daily}}" wx:key="{{item}}">
-          <view id="{{item}}" class="kind-list-item-foot" bindtap="clickBtn">
-      
+          <view id="{{item}}" class="kind-list-item-foot">
+                  <view class="index-desc">{{item.date}}</view>
                   <image class="kind-list-img" wx:if="{{item.text_day=='晴'}}" src="../../image/sunny_day.png"></image>
                   <image class="kind-list-img" wx:if="{{item.text_day=='阴'}}" src="../../image/cloudy.png"></image> 
                   <image class="kind-list-img" wx:if="{{item.text_day=='多云'}}" src="../../image/cloudy_day.png"></image>  
@@ -28,8 +36,8 @@
                   <image class="kind-list-img" wx:if="{{item.text_day=='阵雨'}}" src="../../image/shower.png"></image>  
                   
                 <view class="index-desc">{{item.text_day}}</view>
-                <view class="index-desc">{{item.wind_direction}}</view>
-                <view class="index-desc">{{item.wind_speed}}</view>
+                <view class="index-desc">{{item.wind_direction}}风</view>
+                <view class="index-desc">{{item.high}}/{{item.low}}</view>
            </view>
       </block>
       </view>
